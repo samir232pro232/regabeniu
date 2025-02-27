@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Картинка со звуком</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        img {
+            cursor: pointer;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="321\7abc97e973af4b829ebb1b6c44afbb63.png" alt="Картинка" id="image">
+
+     <audio id="audio" src="321\123123.mp3" loop autoplay></audio>
+
+    <script>
+        const image = document.getElementById('image');
+        const audio = document.getElementById('audio');
+
+        image.addEventListener('click', () => {
+            audio.currentTime = 0; // Начинаем звук с начала
+            audio.play(); // Воспроизводим звук
+        });
+    </script>
+</body>
+</html>
